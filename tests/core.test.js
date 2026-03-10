@@ -1,5 +1,5 @@
-import { it, expect, describe } from 'vitest'
-import { calculateDiscount, canDrive, getCoupons, isPriceInRange, isValidUsername, validateUserInput } from '../src/core'
+import { it, expect, describe, beforeEach, beforeAll, afterEach, afterAll } from 'vitest'
+import { calculateDiscount, canDrive, fetchData, getCoupons, isPriceInRange, isValidUsername, validateUserInput } from '../src/core'
 
 describe('getCoupons', () => {
     it('should return an array of coupons', () => {
@@ -186,6 +186,51 @@ describe('canDrive', () => {
     // it('should return true for eligible in the UK', () => {
     //     expect(canDrive(18, 'UK')).toBe(true);
     // });
+})
+
+describe('fetchData', () => {
+    it('should return a promise that will resolve to an array of numbers', async () => {
+        try {
+            const result = await fetchData();
+        } catch (error) {
+            expect(error).toHaveProperty('reason');
+            expect(error.reason).toMatch(/fail/i);
+        }
+
+        // expect(Array.isArray(result)).toBe(true);
+        // expect(result.length).toBeGreaterThan(0);
+
+        // fetchData().then((result) => {
+        //     expect(Array.isArray(result)).toBe(true);
+        //     expect(result.length).toBeGreaterThan(0);
+        // });
+    });
+})
+
+describe('test suite', () => {
+    beforeAll(() => {
+        console.log('beforeAll called');
+    })
+
+    beforeEach(() => {
+        console.log('beforeEach called');
+    })
+
+    afterAll(() => {
+        console.log('afterAll called');
+    })
+
+    afterEach(() => {
+        console.log('afterEach called');
+    })
+
+    it('test case 1', () => {
+        
+    })
+
+    it('test case 2', () => {
+        
+    })
 })
 
 // describe('test suite', () => {
