@@ -1,12 +1,12 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
     clearMocks: true,
     coverage: {
       provider: 'v8',
-      include: ['**/*.js'],   // bütün js dosyalarını coverage'a dahil eder
-      exclude: ['**/*.test.js', 'node_modules/**']
-    }
-  }
-})
+      include: ['**/*.js'], // bütün js dosyalarını coverage'a dahil eder
+      exclude: ['**/*.test.js', 'node_modules/**'],
+    },
+  },
+});

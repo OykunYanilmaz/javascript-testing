@@ -4,7 +4,7 @@ export function max(a, b) {
   // else if (b > a) return b;
   // return a;
 
-  return (a>b) ? a : b;
+  return a > b ? a : b;
 }
 
 // Exercise
